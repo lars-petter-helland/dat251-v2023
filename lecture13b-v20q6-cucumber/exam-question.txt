@@ -1,0 +1,18 @@
+-------------------------------------
+| From DAT251 Exam 19th of May 2020 |
+-------------------------------------
+
+Question 6 (13% - 40 min) - BDD and Cucumber
+--------------------------------------------
+“Cucumber is a testing tool that supports Behaviour Driven Development (BDD).”
+
+We want to build a web store application. One of the requirements is that a user
+should be able to put items in a shopping cart while browsing the store. 
+The shopping cart should keep track of the number of each selected item (5 bananas), 
+calculate subtotals for each item (the total for the 5 bananas), and calculate the 
+total for the cart.
+
+Suggest how a tool like Cucumber can be utilized in the development of this requirement.
+Write a sample Cucumber test for the shopping cart requirement for one feature with 
+one scenario written in Gherkin, and with step-definitions written in Java. You should 
+explain choices made in how Cucumber communicate with the underlying application.

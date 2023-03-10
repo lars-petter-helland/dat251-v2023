@@ -1,0 +1,26 @@
+--------------------------------
+| From DAT251 Exam 20 May 2019 |
+--------------------------------
+
+Question 7 (10 % ~ 30 min) - Mockito
+------------------------------------
+This question is about unit testing and test isolation.
+
+Your job is to write unit tests for a LoginService. The LoginService collaborates with
+a UserDAO (an object that retrieves a User from the database) and the retrieved User. 
+This is a typical workflow:
+   1. The client asks the LoginService if isAuthenticated("someUserName", "somePassword")
+   2. The LoginService then in turn tells the UserDAO to findUserByUserName("someUserName")
+   3. If the user exists, the LoginService gets a User in return and asks the User if
+         passwordMatches("somePassword")
+   4. If the user exists and the password matches, the user is authenticated. Otherwise, 
+      the user is not authenticated.
+      
+Use the mockito framework to obtain test isolation for the LoginService. Also, use a 
+@Before-method to do all the setup to make the test methods as lean/focused as possible. 
+You can assume that a UserDAO can be injected into the LoginService by setter-injection. 
+Write 4 tests that verifies that:
+ - anExistingUserWithMatchingPasswordShouldBeAuthenticated
+ - anExistingUserWithNonMatchingPasswordShouldNotBeAuthenticated
+ - loginServiceShouldTellUserDAOToFindUserByUserName
+ - loginServiceShouldAskFoundUserIfPasswordMatches
